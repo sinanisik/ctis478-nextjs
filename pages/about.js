@@ -1,23 +1,26 @@
+import Layout from "../components/Layout/Layout";
 import styles from "../styles/About.module.css";
 
 const About = ({ team }) => {
   return (
-    <div className={styles.container}>
-      <h1>About</h1>
-      <p>
-        This a demo project for CTIS 478 - Advanced Web Technologies course.
-      </p>
-      <h1>Team Members</h1>
-      <ul>
-        {team.map((member) => {
-          return (
-            <li>
-              <h3>{member.name}</h3>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <Layout>
+      <div className={styles.container}>
+        <h1>About</h1>
+        <p>
+          This a demo project for CTIS 478 - Advanced Web Technologies course.
+        </p>
+        <h1>Team Members</h1>
+        <ul>
+          {team.map((member) => {
+            return (
+              <li>
+                <h3>{member.name}</h3>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </Layout>
   );
 };
 
