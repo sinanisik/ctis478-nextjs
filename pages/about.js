@@ -7,7 +7,8 @@ const About = ({ team }) => {
       <div className={styles.container}>
         <h1>About</h1>
         <p>
-          This a demo project for CTIS 478 - Advanced Web Technologies course.
+          This is a demo project for CTIS 478 - Advanced Web Technologies
+          course.
         </p>
         <h1>Team Members</h1>
         <ul>
