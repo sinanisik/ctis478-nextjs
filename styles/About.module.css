@@ -1,0 +1,23 @@
+.container {
+  padding: 24px;
+  height: 100vh;
+
+  /* display: grid;
+  grid-template-rows: 1fr 6fr 1fr; */
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  color: var(--text-color-secondary);
+  font-size: 40px;
+}
+
+.container h3 {
+  font-size: 20px;
+}
+
+.container p {
+  font-size: 20px;
+}
