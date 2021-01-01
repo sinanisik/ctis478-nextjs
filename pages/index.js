@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/Layout/Layout";
 import SearchInput from "../components/SearchInput/SearchInput";
-import styles from "../styles/Home.module.css";
 import CountriesTable from "../components/CountriesTable/CountriesTable";
 
 export default function Home({ countries }) {
@@ -23,6 +22,7 @@ export default function Home({ countries }) {
   );
 }
 
+// Used in Static Generation
 // Get all the data at the build time
 export const getStaticProps = async () => {
   const res = await fetch("https://restcountries.eu/rest/v2/all");

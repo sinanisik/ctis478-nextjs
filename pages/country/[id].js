@@ -33,24 +33,8 @@ const Country = ({ country }) => {
 
 export default Country;
 
-// pre-render at request time. If the population is updated every second, every minite or every day.
-// This data does not need to be updated that often.
-// Time to first byte will be slower than getStaticProps.
-// Server must compute the result on every request
-// export const getServerSideProps = async ({ params }) => {
-//   const res = await fetch(
-//     `https://restcountries.eu/rest/v2/alpha/${params.id}`
-//   );
-
-//   const country = await res.json();
-
-//   return {
-//     props: {
-//       country: country,
-//     },
-//   };
-// };
-
+// Used in Static Generation
+// return the paths that should be pre-rendered
 export const getStaticPaths = async () => {
   const res = await fetch("https://restcountries.eu/rest/v2/all");
   const countries = await res.json();
@@ -84,3 +68,21 @@ export const getStaticProps = async ({ params }) => {
     },
   };
 };
+
+// pre-render at request time. If the population is updated every second, every minite or every day.
+// This data does not need to be updated that often.
+// Time to first byte will be slower than getStaticProps.
+// Server must compute the result on every request
+// export const getServerSideProps = async ({ params }) => {
+//   const res = await fetch(
+//     `https://restcountries.eu/rest/v2/alpha/${params.id}`
+//   );
+
+//   const country = await res.json();
+
+//   return {
+//     props: {
+//       country: country,
+//     },
+//   };
+// };
