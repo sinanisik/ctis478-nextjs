@@ -1,6 +1,6 @@
 ## CTIS 478 - Next.js Project
 
-![home-page](/Users/isiksinan/Documents/GitHub/ctis478-nextjs/home-page.png)
+![home-page](/home-page.png)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
